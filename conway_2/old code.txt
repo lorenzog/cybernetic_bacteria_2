@@ -1,0 +1,111 @@
+	// // Count the number of adjacent cells 'on'
+	// public int countNeighbors(int x, int y) {
+	// int count = 0;
+	// int[] neighbors = getNeighbors(x, y);
+	//
+	// for (int i = 0; i < 8; i++)
+	// if (neighbors[i] != 0)
+	// count++;
+	//
+	// return count;
+	// }
+
+	//
+	// public int countMajorityType(int x, int y) {
+	// int[] neighbors = getNeighbors(x, y);
+	//
+	// // we already know we have 3 'on' neighbors;
+	// // so it can be either AAA, AAB, ABC
+	// // therefore the first one that has 2 matches is the winner
+	// // otherwise random choice amongst the 3
+	// int[] candidates = new int[3];
+	// for (int i = 0; i < 3; i++)
+	// candidates[i] = 0;
+	//
+	// for (int i = 0; i < 8; i++) {
+	// // don't care about empty neighbors
+	// if (neighbors[i] == 0)
+	// continue;
+	//
+	// // if uninitialised
+	// if (candidates[0] == 0) {
+	// candidates[0] = neighbors[i]; // assign
+	// continue;
+	// }
+	// // second match
+	// if (candidates[0] == neighbors[i])
+	// return candidates[0];
+	//
+	// if (candidates[1] == 0) {
+	// candidates[1] = neighbors[i];
+	// continue;
+	// }
+	// if (candidates[1] == neighbors[i])
+	// return candidates[1];
+	//
+	// if (candidates[2] == 0) {
+	// candidates[2] = neighbors[i];
+	// continue;
+	// }
+	// if (candidates[2] == neighbors[i])
+	// return candidates[2];
+	// }
+	//
+	// // if it reaches here then exactly three matching cases
+	// return candidates[PApplet.parseInt(random(3))];
+	//
+	// }
+	
+	
+	
+		// original game of life
+		//
+		// int majorityOfType;
+		// int neighbors;
+		// /* death and rebirth */
+		// for (int i = 0; i < sx; i++) {
+		// for (int j = 0; j < sy; j++) {
+		//
+		// neighbors = countNeighbors(i, j);
+		//
+		// neighbors = countNeighbors(i, j);
+		//				
+		// // stay alive
+		// if (neighbors == 3 && world[i][j][0] == 0) {
+		// // the most abundant individuals nearby are of type...
+		// majorityOfType = countMajorityType(i, j);
+		// // most = random_most_ab(i, j);
+		// world[i][j][1] = majorityOfType;
+		// }
+		//				
+		// /* death for overcrowding or loneliness */
+		// if ((neighbors < 2 || neighbors > 3) && world[i][j][0] > 0)
+		// world[i][j][1] = -1;
+		//
+		// }
+		
+		
+		
+	// // XXX warning! only valid if world[][][x] contains pointer to
+	// individual,
+	// // not only the colour; must be moved inside the individual() to
+	// calculate
+	// // its neighbors...
+	// public int[] getNeighbors(int x, int y) {
+	// int neighbors[] = new int[8];
+	//
+	// /* right */neighbors[0] = world[(x + 1) % sx][y][0];
+	// /* top */neighbors[1] = world[x][(y + 1) % sy][0];
+	// /* left */neighbors[2] = world[(x + sx - 1) % sx][y][0];
+	// /* bottom */neighbors[3] = world[x][(y + sy - 1) % sy][0];
+	// /* topright */neighbors[4] = world[(x + 1) % sx][(y + 1) % sy][0];
+	// /* topleft */neighbors[5] = world[(x + sx - 1) % sx][(y + 1) % sy][0];
+	// /* bottomleft */neighbors[6] = world[(x + sx - 1) % sx][(y + sy - 1)
+	// % sy][0];
+	// /* bottomright */neighbors[7] = world[(x + 1) % sx][(y + sy - 1) %
+	// sy][0];
+	//
+	// return neighbors;
+	// }
+		
+	
