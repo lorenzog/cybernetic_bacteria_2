@@ -1,4 +1,4 @@
-NOTE - this project was originally on google code (it's still there), but I'm moving it here to have all my public code under the same roof -lg
+NOTE - this project was originally on google code.
 
 This project hosts the source code for the Cybernetic Bacteria 2.0 art project, hosted at http://www.sciencegallery.ie/infectious in Dublin, Ireland. 
 
